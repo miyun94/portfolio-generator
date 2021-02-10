@@ -1,7 +1,7 @@
-const generatePage = require('./src/page-template.js');
+//In order to use functions from one module inside another, we use the related statements module.exports and require
+module.exports = (name, github) => {
 
 //With template literals, we can wrap the string in backticks and interpolate the variables with the ${<variable>} syntax.
-const generatePage = (name, github) => {
     return `
     <!DOCTYPE html> 
     <html lang="en"> 
@@ -18,7 +18,5 @@ const generatePage = (name, github) => {
     </body>
     </html>
     `;
-}
+};
 
-//In order to use functions from one module inside another, we use the related statements module.exports and require
-module.exports = generatePage; 
